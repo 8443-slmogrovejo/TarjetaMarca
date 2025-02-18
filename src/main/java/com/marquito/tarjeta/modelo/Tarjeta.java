@@ -11,7 +11,11 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
 @Entity
 @Table(name = "TARJETA")
 public class Tarjeta implements Serializable {
@@ -69,113 +73,6 @@ public class Tarjeta implements Serializable {
     @NotNull
     @Column(name = "ESTADO", length = 3, nullable = false)
     private String estado;
-
-    public Tarjeta() {
-    }
-
-    public String getCodTarjeta() {
-        return codTarjeta;
-    }
-
-    public void setCodTarjeta(String codTarjeta) {
-        this.codTarjeta = codTarjeta;
-    }
-
-    public String getSwiftBanco() {
-        return swiftBanco;
-    }
-
-    public void setSwiftBanco(String swiftBanco) {
-        this.swiftBanco = swiftBanco;
-    }
-
-    public String getTipoDocumentoCliente() {
-        return tipoDocumentoCliente;
-    }
-
-    public void setTipoDocumentoCliente(String tipoDocumentoCliente) {
-        this.tipoDocumentoCliente = tipoDocumentoCliente;
-    }
-
-    public String getNumeroDocumentoCliente() {
-        return numeroDocumentoCliente;
-    }
-
-    public void setNumeroDocumentoCliente(String numeroDocumentoCliente) {
-        this.numeroDocumentoCliente = numeroDocumentoCliente;
-    }
-
-    public String getNombreCliente() {
-        return nombreCliente;
-    }
-
-    public void setNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
-    }
-
-    public String getPaisCliente() {
-        return paisCliente;
-    }
-
-    public void setPaisCliente(String paisCliente) {
-        this.paisCliente = paisCliente;
-    }
-
-    public String getCorreoCliente() {
-        return correoCliente;
-    }
-
-    public void setCorreoCliente(String correoCliente) {
-        this.correoCliente = correoCliente;
-    }
-
-    public String getIdClienteBanco() {
-        return idClienteBanco;
-    }
-
-    public void setIdClienteBanco(String idClienteBanco) {
-        this.idClienteBanco = idClienteBanco;
-    }
-
-    public String getNumeroTarjeta() {
-        return numeroTarjeta;
-    }
-
-    public void setNumeroTarjeta(String numeroTarjeta) {
-        this.numeroTarjeta = numeroTarjeta;
-    }
-
-    public LocalDateTime getFechaEmision() {
-        return fechaEmision;
-    }
-
-    public void setFechaEmision(LocalDateTime fechaEmision) {
-        this.fechaEmision = fechaEmision;
-    }
-
-    public LocalDate getFechaCaducidad() {
-        return fechaCaducidad;
-    }
-
-    public void setFechaCaducidad(LocalDate fechaCaducidad) {
-        this.fechaCaducidad = fechaCaducidad;
-    }
-
-    public String getCvv() {
-        return cvv;
-    }
-
-    public void setCvv(String cvv) {
-        this.cvv = cvv;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
 
     @Override
     public int hashCode() {
